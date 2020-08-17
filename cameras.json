@@ -1,0 +1,40 @@
+{
+  "camera_data": [
+    {
+      "name": "Camera A",
+      "url": "rtsp://192.168.1.1",
+      "resolution": "1280x720",
+      "location": "Main Hall",
+      "status": "ok"
+    },
+    {
+      "name": "Camera B",
+      "url": "rtsp://192.168.1.2",
+      "resolution": "1280x720",
+      "location": "Lobby",
+      "status": "ok"
+    },
+    {
+      "name": "Camera C",
+      "url": "rtsp://192.168.1.3",
+      "resolution": "640x480",
+      "location": "Building C",
+      "status": "ok"
+    },
+    {
+      "name": "Camera D",
+      "url": "rtsp://192.168.1.4",
+      "resolution": "1280x720",
+      "location": "Library",
+      "status": "disconnected"
+    },
+    {
+      "name": "Camera E",
+      "url": "rtsp://192.168.1.5",
+      "resolution": "1280x720",
+      "location": "Bursar",
+      "status": "ok"
+    }
+  ]
+}
+
