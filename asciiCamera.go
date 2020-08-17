@@ -24,10 +24,6 @@ type Camera struct {
 }
 
 func main() {
-	// make new instance of tablewriter and set the headers
-	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"NAME", "URL", "RESOLUTION", "LOCATION", "STATUS"})
-
 	// open json file
 	jsonFile, err := os.Open("./cameras.json")
 
@@ -60,7 +56,15 @@ func main() {
 		data = append(data, temp)
 	}
 
-	// 'AppendBulk' adds the array-of-arrays to the tablewriter body
+	// new tablewriter instance
+	table := tablewriter.NewWriter(os.Stdout)
+
+	// string headers for tablewriter
+	headers := []string{"NAME", "URL", "RESOLUTION", "LOCATION", "STATUS"}
+
+	table.SetHeader(headers)
+
+	// adds camera array-of-array to ascii table
 	table.AppendBulk(data)
 
 	table.Render()
